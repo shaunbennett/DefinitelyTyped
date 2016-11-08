@@ -464,9 +464,9 @@ declare module "hapi" {
 			 'private'mark the response as suitable only for private caching.  */
 			privacy: string;
 			/**  relative expiration expressed in the number of milliseconds since the item was saved in the cache.Cannot be used together with expiresAt. */
-			expiresIn: number;
+			expiresIn?: number;
 			/**  time of day expressed in 24h notation using the 'HH:MM' format, at which point all cache records for the route expire.Cannot be used together with expiresIn.  */
-			expiresAt: string;
+			expiresAt?: string;
 		};
 		/** the Cross- Origin Resource Sharing protocol allows browsers to make cross- origin API calls.CORS is required by web applications running inside a browser which are loaded from a different domain than the API server.CORS headers are disabled by default. To enable, set cors to true, or to an object with the following options: */
 		cors?: {
